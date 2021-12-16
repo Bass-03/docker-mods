@@ -1,7 +1,10 @@
-# Python3 - Docker mod for code-server
+# Pyenv - Docker mod for code-server
 
-This mod adds a python3 dev environment to code-server, to be installed/updated during container start.
+This mod adds a pyenv to code-server, to be installed/updated during container start.
 
-In code-server docker arguments, set an environment variable `DOCKER_MODS=linuxserver/mods:code-server-python3`
+Benefit over installing a single python version?
+`Pyenv` installs shims in the home folder, hence all packages and shims will have persistence.
 
-If adding multiple mods, enter them in an array separated by `|`, such as `DOCKER_MODS=linuxserver/mods:code-server-python3|linuxserver/mods:code-server-mod2`
+In code-server docker arguments, set an environment variable `DOCKER_MODS=linuxserver/mods:code-server-pyenv`
+
+If adding multiple mods, enter them in an array separated by `|`, such as `DOCKER_MODS=linuxserver/mods:code-server-pyenv|linuxserver/mods:code-server-mod2`

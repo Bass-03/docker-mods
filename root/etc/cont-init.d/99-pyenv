@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+echo "**** installing pyenv ****"
+curl https://pyenv.run | bash

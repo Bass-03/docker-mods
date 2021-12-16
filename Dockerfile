@@ -1,6 +1,6 @@
 FROM scratch
 
-LABEL maintainer="aptalca"
+LABEL maintainer="Bass-03"
 
 # copy local files
 COPY root/ /
