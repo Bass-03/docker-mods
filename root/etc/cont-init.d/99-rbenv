@@ -1,0 +1,35 @@
+#!/usr/bin/with-contenv bash
+
+apt -y install rbenv
+
+if [ -f "$HOME/.zshrc" ]; 
+then
+    echo "**** .zshrc Found ****"
+    isInFile=$(cat $HOME/.zshrc | grep -c "rbenv")
+    if [ $isInFile -eq 0 ]; 
+    then
+        echo "**** Adding rbenv to PATH ****"
+        echo '# Adding rbenv to PATH' >> $HOME/.zshrc
+        echo 'eval "$(rbenv init -)"' >> $HOME/.zshrc
+    else
+        echo "rbenv already on zshrc PATH"
+    fi
+else
+    echo ".zshrc not present"
+fi
+
+if [ -f "$HOME/.bashrc" ]; 
+then
+    echo "**** .bashrc Found ****"
+    isInFile=$(cat $HOME/.bashrc | grep -c "rbenv")
+    if [ $isInFile -eq 0 ]; 
+    then
+        echo "**** Adding rbenv to PATH ****"
+        echo '# Adding rbenv to PATH' >> $HOME/.bashrc
+        echo 'eval "$(rbenv init -)"' >> $HOME/.bashrc
+    else
+        echo "rbenv already on zshrc PATH"
+    fi
+else
+    echo ".bashrc not present"
+fi

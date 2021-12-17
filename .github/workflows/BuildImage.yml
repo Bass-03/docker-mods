@@ -5,7 +5,7 @@ on: [push, pull_request, workflow_dispatch]
 env:
   ENDPOINT: "bass03/mods" #don't modify
   BASEIMAGE: "code-server" #replace
-  MODNAME: "pyenv" #replace, must match branch name
+  MODNAME: "rbenv" #replace, must match branch name
 jobs:
   build:
     runs-on: ubuntu-latest
