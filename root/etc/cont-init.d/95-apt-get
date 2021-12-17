@@ -2,14 +2,14 @@
 
 apt-get update
 echo "**** installing pyenv dependencies ****"
-apt-get install make build-essential \
+apt-get -y install make build-essential \
         libssl-dev \
         zlib1g-dev \
         libbz2-dev \
         libreadline-dev \
         libsqlite3-dev \
-        wget \ 
-        curl \ 
+        wget \
+        curl \
         llvm \
         libncursesw5-dev \
         xz-utils \
