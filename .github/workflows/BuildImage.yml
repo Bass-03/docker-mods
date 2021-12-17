@@ -3,10 +3,9 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "bass03/code-server-mods" #don't modify
+  ENDPOINT: "bass03/mods" #don't modify
   BASEIMAGE: "code-server" #replace
-  MODNAME: "pyenv" #replace
-
+  MODNAME: "code-server-pyenv" #replace, must match branch name
 jobs:
   build:
     runs-on: ubuntu-latest
